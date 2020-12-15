@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block body_block %}
+
+    {{tableid}}
+    <form method="POST" action="{% url 'order' tableid %}">
+        {% csrf_token %}
+        {{formm.as_p}}
+    <input type="submit">
+    </form>
+
+{% endblock %}
